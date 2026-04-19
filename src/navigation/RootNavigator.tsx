@@ -10,6 +10,7 @@ import {
   CreateChallengeScreen,
   LeaderboardScreen,
 } from '@/features/challenges/screens';
+import { ProfileScreen } from '@/features/profile/screens/ProfileScreen';
 
 export type RootStackParamList = {
   Login: undefined;
@@ -20,6 +21,7 @@ export type RootStackParamList = {
   ChallengeDetail: { challengeId?: string };
   CreateChallenge: undefined;
   Leaderboard: { challengeId?: string };
+  Profile: undefined;
 };
 
 type RootNavigatorProps = {
@@ -45,6 +47,7 @@ export function RootNavigator({ authenticated }: RootNavigatorProps) {
         </>
       )}
       <Stack.Screen name="Home" component={HomeScreen} />
+      <Stack.Screen name="Profile" component={ProfileScreen} />
       <Stack.Screen name="ChallengeList" component={ChallengeListScreen} />
       <Stack.Screen name="ChallengeDetail" component={ChallengeDetailScreen} />
       <Stack.Screen name="CreateChallenge" component={CreateChallengeScreen} />
