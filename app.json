@@ -1,0 +1,21 @@
+{
+  "expo": {
+    "name": "Pace Rivals",
+    "slug": "pace-rivals",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSHealthShareUsageDescription": "Pace Rivals uses your step data to power challenge progress once Apple Health sync is enabled.",
+        "NSHealthUpdateUsageDescription": "Pace Rivals may write workout or challenge progress to Apple Health if you enable that feature later."
+      }
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false
+    }
+  }
+}
