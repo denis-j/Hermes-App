@@ -4,12 +4,22 @@ import { LoginScreen } from '@/features/auth/screens/LoginScreen';
 import { RegisterScreen } from '@/features/auth/screens/RegisterScreen';
 import { ForgotPasswordScreen } from '@/features/auth/screens/ForgotPasswordScreen';
 import { HomeScreen } from '@/features/home/screens/HomeScreen';
+import {
+  ChallengeListScreen,
+  ChallengeDetailScreen,
+  CreateChallengeScreen,
+  LeaderboardScreen,
+} from '@/features/challenges/screens';
 
 export type RootStackParamList = {
   Login: undefined;
   Register: undefined;
   ForgotPassword: undefined;
   Home: undefined;
+  ChallengeList: undefined;
+  ChallengeDetail: { challengeId?: string };
+  CreateChallenge: undefined;
+  Leaderboard: { challengeId?: string };
 };
 
 type RootNavigatorProps = {
@@ -35,6 +45,10 @@ export function RootNavigator({ authenticated }: RootNavigatorProps) {
         </>
       )}
       <Stack.Screen name="Home" component={HomeScreen} />
+      <Stack.Screen name="ChallengeList" component={ChallengeListScreen} />
+      <Stack.Screen name="ChallengeDetail" component={ChallengeDetailScreen} />
+      <Stack.Screen name="CreateChallenge" component={CreateChallengeScreen} />
+      <Stack.Screen name="Leaderboard" component={LeaderboardScreen} />
     </Stack.Navigator>
   );
 }
