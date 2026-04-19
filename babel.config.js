@@ -12,6 +12,8 @@ module.exports = function (api) {
         {
           alias: {
             '@/': './src/',
+            '@/components': './components',
+            '@/components/*': './components/*',
             '@': './src',
           },
           extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
