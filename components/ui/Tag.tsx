@@ -6,8 +6,8 @@ type TagProps = {
 
 export function Tag({ label }: TagProps) {
   return (
-    <View className="rounded-full bg-slate-900/5 px-3 py-2">
-      <Text className="text-xs font-medium tracking-wide text-slate-700">
+    <View className="rounded-full bg-secondary px-3 py-2">
+      <Text className="text-xs font-medium tracking-wide text-secondary-foreground">
         {label}
       </Text>
     </View>
